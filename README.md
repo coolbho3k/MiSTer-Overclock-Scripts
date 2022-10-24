@@ -1,9 +1,9 @@
 # MiSTer FPGA Overclock Scripts
 
-Works in conjunction with the [MiSTer FPGA Overclock Kernel](https://github.com/coolbho3k/Linux-Kernel_MiSTer/releases/) to overclock or underclock your MiSTer system.
+Works in conjunction with the [MiSTer FPGA Overclock Kernel](https://github.com/coolbho3k/Linux-Kernel_MiSTer/releases/) to overclock or underclock your MiSTer system. The driver has been merged into the main MiSTer kernel, so after the next official kernel release, a special kernel won't be required.
 
 ## Warning
-- Active cooling or very good passive cooling required!
+- Active cooling (heatsink + fan) or very good passive cooling (ie. aluminum passively cooled case) required!
 - Overclock/underclock at your own risk!
 - These scripts are licensed under GPLv3, so they come with no warranty.
 
