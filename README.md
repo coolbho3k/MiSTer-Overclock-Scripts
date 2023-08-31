@@ -15,4 +15,17 @@ The kernel driver's default behavior is to keep the MiSTer at 800 MHz (stock) un
 - Run `set_cpu_max_1200.sh` to set max clock speed to 1.2 GHz
 - Run `set_cpu_max_1000.sh` to set max clock speed to 1.0 GHz
 - Run `set_cpu_max_800.sh` to set max clock speed to 800 MHz (stock)
-- Run `set_cpu_max_400.sh` to set max clock speed to 400MHz
+- Run `set_cpu_max_400.sh` to set max clock speed to 400 MHz
+
+## Memory overclock
+Change the TARGET_KHZ line in mister_mem_oc.sh before copying it over to your SD card with your desired frequency (in KHz).
+
+These must be in increments of `25000`. For example:
+
+`TARGET_KHZ=800000` 800 MHz, same as stock.
+`TARGET_KHZ=850000` 850 MHz
+`TARGET_KHZ=900000` 900 MHz
+`TARGET_KHZ=950000` 950 MHz
+`TARGET_KHZ=1000000` 1000 MHz
+`TARGET_KHZ=1050000` 1050 MHz
+`TARGET_KHZ=1100000` 1100 MHz
