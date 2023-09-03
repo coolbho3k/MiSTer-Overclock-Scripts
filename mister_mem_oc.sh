@@ -1,10 +1,30 @@
 #!/bin/bash
 
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
 # User constants
 TARGET_KHZ=900000        # Desired frequency to overclock to
 MIN_FREQ_KHZ=800000      # Minimum frequency in KHz
 MAX_FREQ_KHZ=1200000     # Maximum frequency in KHz
 INCREMENT_KHZ=25000      # Frequency increment in KHz
+
+if [ ! -f "/media/fat/MiSTer" ]; 
+then
+  echo "This script must be run"
+  echo "on a MiSTer system."
+  exit 1
+fi
 
 current_reg_value=$(devmem 0xFFD040C0)
 current_numer=$(( (current_reg_value >> 3) & 0x1FFF ))

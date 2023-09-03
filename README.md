@@ -18,6 +18,8 @@ The kernel driver's default behavior is to keep the MiSTer at 800 MHz (stock) un
 - Run `set_cpu_max_400.sh` to set max clock speed to 400 MHz
 
 ## Memory overclock
+`mister_mem_oc.sh` contains a script that will change your DDR3 clock.
+
 Change the `TARGET_KHZ` line in `mister_mem_oc.sh` before copying it over to your SD card with your desired frequency (in KHz).
 
 These must be in increments of `25000`. For example:
@@ -35,3 +37,8 @@ These must be in increments of `25000`. For example:
 `TARGET_KHZ=1050000` 1050 MHz
 
 `TARGET_KHZ=1100000` 1100 MHz
+
+## Memory timings
+`mister_mem_timings.sh` contains a script that will change your DDR3 timings.
+
+The timings are set to stock by default. Change the timings at the top of the file before copying it over to your SD card with your desired timings.
